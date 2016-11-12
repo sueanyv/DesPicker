@@ -40,14 +40,14 @@ ul.topnav li.icon {display: none;}
 
 margin-top: 60px
  }
- #container .image-container {
+ #container .imageContainer {
         text-align: center;
         vertical-align: middle;
         display: table-cell;
 
     }
 
-    #container  .image-container img {
+    #container  .imageContainer img {
 
         width: 400px;
         height: 400px;
@@ -106,14 +106,14 @@ height: 500px;
        display: table;
 margin-top: 60px
    }
-   #container .image-container {
+   #container .imageContainer {
           text-align: center;
           vertical-align: middle;
           display: table-cell;
 
       }
 
-      #container  .image-container img {
+      #container  .imageContainer img {
 
           max-width: 360px;
           max-height: 260px;
