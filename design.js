@@ -62,7 +62,7 @@ function uniqueImg() {
 
 uniqueImg();
 
-document.getElementById('button').addEventListener('click', displayDate);
+imageContainer.addEventListener('click', handleImageClick);
 
 function myFunction() {
   var x = document.getElementById('myTopnav');
