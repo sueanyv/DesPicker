@@ -64,6 +64,43 @@ uniqueImg();
 
 imageContainer.addEventListener('click', handleImageClick);
 
+
+
+
+
+
+function handleImageClick(event) {
+  var clickedDesign;
+  switch (event.target.id) {
+  case 'npicture':
+    clickedProduct = productImg[newImg[0]];
+    break;
+  }
+  clickedProduct.click += 1;
+  totalClicks += 1;
+  if (totalClicks >= 25) {
+    showResuts();
+    imgContainer.removeEventListener('click', handleImageClick);
+    displayChart();
+    storeLocalData();
+  } else {
+    render();
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 function myFunction() {
   var x = document.getElementById('myTopnav');
   if (x.className === 'topnav') {
