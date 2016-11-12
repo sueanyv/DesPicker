@@ -1,6 +1,6 @@
 'use strict';
 
-var imgContainer = document.getElementById('image-container');
+var imgContainer = document.getElementById('imageContainer');
 var npicture = document.getElementById('npicture');
 
 var nailDesignsImg = [];
@@ -39,7 +39,9 @@ function turnArrayIntoImages(NailDesigns, nails) {
   nails.setAttributeNode(att);
 }
 
+document.getElementById('button').addEventListener('click', uniqueImg);
 
+console.log();
 function randImg() {
   // create the random number here
   return Math.floor(Math.random() * nailDesignsImg.length);
@@ -61,6 +63,14 @@ function uniqueImg() {
 }
 
 uniqueImg();
+
+
+
+
+
+
+
+
 
 function myFunction() {
   var x = document.getElementById('myTopnav');
