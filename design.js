@@ -62,6 +62,8 @@ function uniqueImg() {
 
 uniqueImg();
 
+document.getElementById('button').addEventListener('click', displayDate);
+
 function myFunction() {
   var x = document.getElementById('myTopnav');
   if (x.className === 'topnav') {
