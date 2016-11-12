@@ -1,6 +1,6 @@
 'use strict';
 
-var imgContainer = document.getElementById('image-container');
+var imgContainer = document.getElementById('imageContainer');
 var npicture = document.getElementById('npicture');
 
 var nailDesignsImg = [];
@@ -39,7 +39,9 @@ function turnArrayIntoImages(NailDesigns, nails) {
   nails.setAttributeNode(att);
 }
 
+document.getElementById('button').addEventListener('click', uniqueImg);
 
+console.log();
 function randImg() {
   // create the random number here
   return Math.floor(Math.random() * nailDesignsImg.length);
@@ -61,37 +63,6 @@ function uniqueImg() {
 }
 
 uniqueImg();
-
-imageContainer.addEventListener('click', handleImageClick);
-
-
-
-
-
-
-function handleImageClick(event) {
-  var clickedDesign;
-  switch (event.target.id) {
-  case 'npicture':
-    clickedProduct = productImg[newImg[0]];
-    break;
-  }
-  clickedProduct.click += 1;
-  totalClicks += 1;
-  if (totalClicks >= 25) {
-    showResuts();
-    imgContainer.removeEventListener('click', handleImageClick);
-    displayChart();
-    storeLocalData();
-  } else {
-    render();
-
-  }
-}
-
-
-
-
 
 
 
