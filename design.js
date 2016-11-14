@@ -2,7 +2,7 @@
 
 var imgContainer = document.getElementById('imageContainer');
 var npicture = document.getElementById('npicture');
-
+var pictures = [];
 var nailDesignsImg = [];
 
 function NailDesigns(name, path) {
@@ -42,6 +42,7 @@ function turnArrayIntoImages(NailDesigns, nails) {
 document.getElementById('button').addEventListener('click', uniqueImg);
 
 console.log();
+
 function randImg() {
   // create the random number here
   return Math.floor(Math.random() * nailDesignsImg.length);
@@ -54,14 +55,18 @@ function uniqueImg() {
   while (nailDesignsImg[picture].shown === true) {
     console.log('tried to show pic again');
     picture = randImg();
-
+    if (nailDesignsImg[picture].shown !== false) {
+      break;
+    }
   }
 
   nailDesignsImg[picture].shown = true;
+
   console.log(nailDesignsImg[picture].shown);
   turnArrayIntoImages(nailDesignsImg[picture], npicture);
-}
 
+}
+// break;
 uniqueImg();
 
 
